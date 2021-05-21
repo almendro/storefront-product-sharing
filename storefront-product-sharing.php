@@ -241,10 +241,34 @@ final class Storefront_Product_Sharing {
 			<ul>
 				<li class="twitter"><a href="<?php echo esc_url( $twitter_url ); ?>" target="_blank" rel="noopener noreferrer"><?php _e( 'Share on Twitter', 'storefront-product-sharing' ); ?></a></li>
 				<li class="facebook"><a href="<?php echo esc_url( $facebook_url ); ?>" target="_blank" rel="noopener noreferrer"><?php _e( 'Share on Facebook', 'storefront-product-sharing' ); ?></a></li>
-				<li class="pinterest"><a href="<?php echo esc_url( $pinterest_url ); ?>" target="_blank" rel="noopener noreferrer"><?php _e( 'Pin this product', 'storefront-product-sharing' ); ?></a></li>
+				<?php /* <li class="pinterest"><a href="<?php echo esc_url( $pinterest_url ); ?>" target="_blank" rel="noopener noreferrer"><?php _e( 'Pin this product', 'storefront-product-sharing' ); ?></a></li> */ ?>
 				<li class="email"><a href="<?php echo esc_url( $email_url ); ?>"><?php _e( 'Share via Email', 'storefront-product-sharing' ); ?></a></li>
+        <?php /* ><li class="share-redes"><a style="padding:2em 0;" href="#"><i class="fas fa-share-alt-square"></i> Compartir</a></li> */ ?>
 			</ul>
 		</div>
+<?php /*
+    <script>
+      if(navigator.share !== undefined) {
+        document.addEventListener('DOMContentLoaded', e => {
+          var shareBtn = document.querySelector('.share-redes a');
+          shareBtn.addEventListener('click', clickEvent => {
+            clickEvent.preventDefault();
+            navigator.share({
+              title: '<?php echo $product_title; ?>', 
+              text: '<?php echo $product_url; ?>', 
+              url: '<?php echo $product_url; ?>'
+            })
+            .then(() => console.log('Successful share'),
+            error => console.log('Error sharing:', error));
+          });
+        });
+      } else {
+        console.log('Share API no soportado');
+        var shareBtn  = document.querySelector('.share-redes');
+        shareBtn.textContent = '';
+      }
+    </script>
+*/?>
 		<?php
 	}
 } // End Class
