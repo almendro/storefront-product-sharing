@@ -6,8 +6,8 @@
  * Version:             1.0.6
  * Author:              WooCommerce
  * Author URI:          https://woocommerce.com/
- * Requires at least:   4.0.0
- * Tested up to:        4.9
+ * Requires at least:   4.0
+ * Tested up to:        5.2
  *
  * Text Domain: storefront-product-sharing
  * Domain Path: /languages/
@@ -233,7 +233,7 @@ final class Storefront_Product_Sharing {
 		$product_img	= wp_get_attachment_url( get_post_thumbnail_id() );
 
 		$facebook_url 	= 'https://www.facebook.com/sharer/sharer.php?u=' . $product_url;
-		$twitter_url	= 'https://twitter.com/intent/tweet?text=' . rawurlencode( $product_title ) . '&url=' . $product_url;
+		$twitter_url	= 'https://twitter.com/intent/tweet?status=' . rawurlencode( $product_title ) . '+' . $product_url;
 		$pinterest_url	= 'https://pinterest.com/pin/create/bookmarklet/?media=' . $product_img . '&url=' . $product_url . '&is_video=false&description=' . rawurlencode( $product_title );
 		$email_url		= 'mailto:?subject=' . rawurlencode( $product_title ) . '&body=' . $product_url;
 		?>
